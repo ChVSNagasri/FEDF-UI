@@ -1,0 +1,12 @@
+select{
+    padding:30px;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+#time{
+    margin-top: 20px;
+}
+h5{
+    color: rgb(229, 95, 22);
+}

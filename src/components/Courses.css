@@ -1,0 +1,52 @@
+.courses-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: pink;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.courses-table th,
+.courses-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.status-ongoing {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.status-completed {
+  color: green;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-view {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-view:hover {
+  background-color: #218838;
+}

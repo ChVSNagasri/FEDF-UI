@@ -1,0 +1,87 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.student-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 600px;
+  background-color:pink;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+}
+
+.student-card p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+.student-image {
+  width: 1000px;          /* Fixed width */
+  height: 300px;         /* Fixed height */
+  object-fit: cover;     /* Crop images to fit without distortion */
+  border-radius: 10%;    /* Circular shape */
+  margin-bottom: 15px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.student-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 450px;
+  height: 400px;
+  background-color: pink;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-image {
+  width: 300px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0%;
+  margin-bottom: 10px;
+}
+
+/* Progress bar container */
+.progress-bar {
+  width: 100%;           /* Full width of card */
+  height: 15px;          /* Bar height */
+  background-color: #eee;/* Light gray background */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+  border: 1px solid #ccc; /* Optional border to make it more visible */
+}
+
+/* Filled portion of progress */
+.progress-fill {
+  height: 100%;
+  background-color: #ff4b5c; /* Heart red color */
+  width: 0%; /* dynamically set inline in React */
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.student-card p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
