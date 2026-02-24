@@ -38,7 +38,7 @@ const Hostel = () => {
         <h2 className="font-semibold mb-2">Amenities</h2>
         <div className="flex gap-2 flex-wrap">
           {studentRoom.amenities.map((a, i) => (
-            <span key={i} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
+            <span key={i} className="bg-blue-100 text-pink-800 px-2 py-1 rounded text-sm">
               {a}
             </span>
           ))}
