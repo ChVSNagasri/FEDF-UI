@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./table2.css";
-
 export default function Attendance() {
-  const [courseAttendance, setCourseAttendance] = useState([]);
-  const [codeChefAttendance, setCodeChefAttendance] = useState([]);
-
+  const [courseAttendance, setCourseAttendance] = useState([])
+  const [codeChefAttendance, setCodeChefAttendance] = useState([])
   useEffect(() => {
-    // Initial data
     const courses = [
       { code: "25SC1204E", name: "Data Structure and Algorithms", component: "Lab", percentage: "100%" },
       { code: "25SC1204E", name: "Data Structure and Algorithms", component: "Skill", percentage: "100%" },
@@ -17,7 +14,6 @@ export default function Attendance() {
       { code: "25EC1204E", name: "Digital Design and Computer Architecture", component: "Skill", percentage: "80%" },
       { code: "25UC1204E", name: "Communication Skills for Engineers", component: "Lab", percentage: "100%" },
     ];
-
     const codechef = [
       { date: "3-1-2026", status: "Present" },
       { date: "4-1-2026", status: "Present" },
@@ -28,26 +24,19 @@ export default function Attendance() {
       { date: "5-2-2026", status: "Present" },
       { date: "6-2-2026", status: "Present" },
     ];
-
-    // Save to localStorage only once
     if (!localStorage.getItem("courseAttendance")) {
-      localStorage.setItem("courseAttendance", JSON.stringify(courses));
+      localStorage.setItem("courseAttendance", JSON.stringify(courses))
     }
-
     if (!localStorage.getItem("codeChefAttendance")) {
-      localStorage.setItem("codeChefAttendance", JSON.stringify(codechef));
+      localStorage.setItem("codeChefAttendance", JSON.stringify(codechef))
     }
-
-    // Read from localStorage
-    setCourseAttendance(JSON.parse(localStorage.getItem("courseAttendance")));
-    setCodeChefAttendance(JSON.parse(localStorage.getItem("codeChefAttendance")));
+    setCourseAttendance(JSON.parse(localStorage.getItem("courseAttendance")))
+    setCodeChefAttendance(JSON.parse(localStorage.getItem("codeChefAttendance")))
   }, []);
-
   return (
     <div className="attendance-container">
       <h1>Attendance Register</h1>
       <hr />
-
       <h2 style={{ color: "#9ACD32" }}>Course Attendance</h2>
       <table className="attendance-table" border={5} bgcolor="white">
         <thead>
@@ -69,9 +58,7 @@ export default function Attendance() {
           ))}
         </tbody>
       </table>
-
       <hr />
-
       <h2 style={{ color: "#9ACD32" }}>CodeChef Classes</h2>
       <table className="attendance-table" border={5} bgcolor="white">
         <thead>

@@ -7,8 +7,6 @@ export default function Timetable1() {
 
   const [year, setYear] = useState("");
   const [semester, setSemester] = useState("");
-
-  // Load from localStorage on page load
   useEffect(() => {
     const storedYear = localStorage.getItem("academicYear");
     const storedSemester = localStorage.getItem("semester");
@@ -22,8 +20,6 @@ export default function Timetable1() {
       alert("Please select both Academic Year and Semester");
       return;
     }
-
-    // Save to localStorage
     localStorage.setItem("academicYear", year);
     localStorage.setItem("semester", semester);
 

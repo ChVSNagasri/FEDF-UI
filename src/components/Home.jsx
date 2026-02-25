@@ -27,14 +27,7 @@ export default function Home() {
   return (
     <div>
       <div className="card">
-        <img
-          className="oip"
-          src={OIP}
-          alt="Profile"
-          width={100}
-          height={100}
-        />
-
+        <img className="oip" src={OIP} alt="Profile" width={100} height={100} />
         <div className="card-body">
           <h2 style={{ color: "#9ACD32" }}>
             Welcome! {user.id}

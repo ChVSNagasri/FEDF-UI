@@ -4,11 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function Attendence2() {
   const navigate = useNavigate();
-
   const [year, setYear] = useState("");
   const [semester, setSemester] = useState("");
-
-  // Load saved values when page loads
   useEffect(() => {
     const savedYear = localStorage.getItem("attendanceYear");
     const savedSemester = localStorage.getItem("attendanceSemester");

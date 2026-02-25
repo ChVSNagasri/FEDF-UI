@@ -14,19 +14,16 @@ import Attendence2 from "./Attendence2";
 import Internals from './Internals';
 import Timetable1 from './Timetable1';
 import Notfound from './Notfound';
-
 import './nav.css'
 
 export default function Nav() {
   const location = useLocation();
   const navigate = useNavigate();
-
-  // Save current path to localStorage
   useEffect(() => {
     localStorage.setItem("lastVisitedPath", location.pathname);
   }, [location.pathname]);
 
-  // Optional: Load last visited page on first load
+  
   useEffect(() => {
     const lastPath = localStorage.getItem("lastVisitedPath");
     if (lastPath && lastPath !== location.pathname) {

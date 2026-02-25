@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Courses.css";
-
 const Courses = () => {
-
   const defaultCourses = [
     { code: "25sc1203E", name: "Problem Solving through Java", semester: "1", status: "Completed" },
     { code: "25MT1002E", name: "Discrete Mathematics", semester: "1", status: "Completed" },
@@ -14,25 +12,20 @@ const Courses = () => {
     { code: "25MT1102E", name: "Mathematics for AI", semester: "2", status: "Ongoing" },
     { code: "25EC1204E", name: "Digital Design and Computer Architecture", semester: "2", status: "Ongoing" },
     { code: "25UC1204E", name: "Communication Skills for Engineers", semester: "2", status: "Ongoing" },
-  ];
-
+  ]
   const [courses, setCourses] = useState([]);
-
   useEffect(() => {
     const storedCourses = localStorage.getItem("courses");
-
     if (storedCourses) {
       setCourses(JSON.parse(storedCourses));
     } else {
       localStorage.setItem("courses", JSON.stringify(defaultCourses));
       setCourses(defaultCourses);
     }
-  }, []);
-
+  }, [])
   return (
     <div className="courses-page">
       <h1 className="page-title">My Courses</h1>
-
       <table className="courses-table">
         <thead>
           <tr>
@@ -49,13 +42,7 @@ const Courses = () => {
               <td>{course.code}</td>
               <td>{course.name}</td>
               <td>{course.semester}</td>
-              <td
-                className={
-                  course.status === "Ongoing"
-                    ? "status-ongoing"
-                    : "status-completed"
-                }
-              >
+              <td className={course.status === "Ongoing" ? "status-ongoing": "status-completed" } >
                 {course.status}
               </td>
               <td>

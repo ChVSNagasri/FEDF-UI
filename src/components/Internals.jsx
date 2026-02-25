@@ -29,7 +29,6 @@ const Internals = () => {
     }
   }, []);
 
-  // Group by semester
   const semesters = {};
   internals.forEach((item) => {
     if (!semesters[item.semester]) semesters[item.semester] = [];
@@ -42,7 +41,7 @@ const Internals = () => {
 
       {Object.keys(semesters).map((sem) => (
         <div key={sem} className="semester-section">
-          <h2 className="semester-title">Semester {sem}</h2>
+          <h2 className="semester-title" style={{color:'greenyellow'}}>Semester {sem}</h2>
 
           <table className="internals-table">
             <thead>

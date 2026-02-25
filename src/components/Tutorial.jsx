@@ -62,11 +62,7 @@ export default function Tutorial() {
       <div className="card-container">
         {tutorials.map((item, index) => (
           <div className="student-card" key={index}>
-            <img
-              src={item.img}
-              alt={item.course}
-              className="student-image"
-            />
+            <img src={item.img} alt={item.course} className="student-image"/>
 
             <p>
               <strong>Course Code:</strong> {item.courseCode}
@@ -76,10 +72,7 @@ export default function Tutorial() {
             </p>
 
             <div className="progress-bar">
-              <div
-                className="progress-fill"
-                style={{ width: `${item.completion}%` }}
-              ></div>
+              <div className="progress-fill" style={{ width: `${item.completion}%` }} ></div>
             </div>
 
             <p>{item.completion}% completed</p>

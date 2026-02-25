@@ -7,14 +7,12 @@ const Fee = () => {
     { name: "Tuition Fee", amount: 150000 },
     { name: "Hostel Fee", amount: 180000 },
     { name: "Admission Fee", amount: 10000 },
-  ];
-
-  const [fees, setFees] = useState([]);
-  const [paymentStatus, setPaymentStatus] = useState("Pending");
-
+  ]
+  const [fees, setFees] = useState([])
+  const [paymentStatus, setPaymentStatus] = useState("Pending")
   useEffect(() => {
-    const storedFees = localStorage.getItem("fees");
-    const storedStatus = localStorage.getItem("paymentStatus");
+    const storedFees = localStorage.getItem("fees")
+    const storedStatus = localStorage.getItem("paymentStatus")
 
     if (storedFees) {
       setFees(JSON.parse(storedFees));

@@ -17,30 +17,20 @@ export default function Profile() {
     motherTongue: "Telugu",
     caste: "OC",
   };
-
   const [profile, setProfile] = useState(null);
-
   useEffect(() => {
-    // Save to localStorage
     localStorage.setItem("profileData", JSON.stringify(profileData));
-
-    // Read from localStorage
     const storedData = JSON.parse(localStorage.getItem("profileData"));
     setProfile(storedData);
   }, []);
-
   if (!profile) return null;
-
   return (
     <div className="profile-container">
       <div className="card">
         <img className="nag" src={Nag} alt="Profile" />
-
         <h1 className="name">{profile.name}</h1>
         <h3 className="uid">University ID: {profile.uid}</h3>
-
         <hr />
-
         <div className="info">
           <p><strong>Admission Date:</strong> {profile.admissionDate}</p>
           <p><strong>Program:</strong> {profile.program}</p>
@@ -49,9 +39,7 @@ export default function Profile() {
           <p><strong>Blood Group:</strong> {profile.bloodGroup}</p>
           <p><strong>Email:</strong> {profile.email}</p>
         </div>
-
         <hr />
-
         <div className="info">
           <p><strong>Father Name:</strong> {profile.father}</p>
           <p><strong>Mother Name:</strong> {profile.mother}</p>
